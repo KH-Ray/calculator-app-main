@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/KH-Ray/calculator-app-main](https://github.com/KH-Ray/calculator-app-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://rainbow-sable-fcd6ea.netlify.app/](https://rainbow-sable-fcd6ea.netlify.app/)
 
 ## My process
 
