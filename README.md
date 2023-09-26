@@ -1,70 +1,180 @@
-# Getting Started with Create React App
+# Frontend Mentor - Calculator app solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- See the size of the elements adjust based on their device's screen size
+- Perform mathmatical operations like addition, subtraction, multiplication, and division
+- Adjust the color theme based on their preference
+- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](calculator-app-main.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Semantic HTML5 markup
+- Flexbox
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```css
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 10.1rem);
+  grid-template-rows: repeat(5, 6.4rem);
+  justify-content: space-between;
+  align-content: space-between;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  height: 48rem;
+  border-radius: 1rem;
+  background-color: hsl(223, 31%, 20%);
+  padding: 3.2rem;
+}
 
-## Learn More
+.numpad button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  transition: all 50ms;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  width: 10.1rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: "League Spartan", sans-serif;
+}
 
-### Code Splitting
+.numpad button:hover {
+  cursor: pointer;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+.numpad button:active {
+  transform: translateY(0.4rem);
+  border-bottom: none;
+}
 
-### Analyzing the Bundle Size
+.numpad .btn-main {
+  background-color: hsl(30, 25%, 89%);
+  border-bottom: 0.4rem solid hsl(28, 16%, 65%);
+  font-size: 4rem;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+.numpad .btn-main:hover {
+  background-color: #fffffe;
+}
 
-### Making a Progressive Web App
+.numpad .btn-secondary {
+  background-color: hsl(225, 21%, 49%);
+  border-bottom: 0.4rem solid hsl(224, 28%, 35%);
+  font-size: 2.8rem;
+  color: hsl(0, 0%, 100%);
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+.numpad .btn-secondary:hover {
+  background-color: #a2b2e1;
+}
 
-### Advanced Configuration
+.numpad .btn-tertiary {
+  font-size: 2.8rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(6, 63%, 50%);
+  border-bottom: 0.4rem solid hsl(6, 70%, 34%);
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+.numpad .btn-tertiary:hover {
+  background-color: #f96b5b;
+}
 
-### Deployment
+.btn-reset {
+  grid-column: 1 / 3;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+.btn-equals {
+  grid-column: 3 / -1;
+}
 
-### `npm run build` fails to minify
+.btn-reset,
+.btn-equals {
+  width: auto !important;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```js
+export default function ScreenResult({ result, pastNum, operator }) {
+  let historyNum;
+
+  switch (operator) {
+    case "plus":
+      historyNum = `${pastNum} + `;
+      break;
+
+    case "minus":
+      historyNum = `${pastNum} - `;
+      break;
+
+    case "divide":
+      historyNum = `${pastNum} / `;
+      break;
+
+    case "multiply":
+      historyNum = `${pastNum} x `;
+      break;
+
+    case "reset":
+      historyNum = "";
+      break;
+
+    default:
+      break;
+  }
+
+  return (
+    <div className="screen-result">
+      <span className="screen-result-past-number">{historyNum}</span>
+      <span className="screen-result-number">
+        {result === Infinity || +result > 999999999999
+          ? "Error"
+          : result.length === undefined
+          ? String(+result.toFixed(10))
+          : String(result)}
+      </span>
+    </div>
+  );
+}
+```
+
+### Continued development
+
+Haven't finish for the other color themes, will do so in the future.
+
+## Author
+
+- Frontend Mentor - [@UncertainlySure](https://www.frontendmentor.io/profile/UncertainlySure)

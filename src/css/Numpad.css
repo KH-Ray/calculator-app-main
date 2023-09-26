@@ -1,0 +1,85 @@
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 10.1rem);
+  grid-template-rows: repeat(5, 6.4rem);
+  justify-content: space-between;
+  align-content: space-between;
+
+  height: 48rem;
+  border-radius: 1rem;
+  background-color: hsl(223, 31%, 20%);
+  padding: 3.2rem;
+}
+
+.numpad button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 50ms;
+
+  width: 10.1rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.numpad button:hover {
+  cursor: pointer;
+}
+
+.numpad button:active {
+  transform: translateY(0.4rem);
+  border-bottom: none;
+}
+
+.numpad .btn-main {
+  background-color: hsl(30, 25%, 89%);
+  border-bottom: 0.4rem solid hsl(28, 16%, 65%);
+  font-size: 4rem;
+}
+
+.numpad .btn-main:hover {
+  background-color: #fffffe;
+}
+
+.numpad .btn-secondary {
+  background-color: hsl(225, 21%, 49%);
+  border-bottom: 0.4rem solid hsl(224, 28%, 35%);
+  font-size: 2.8rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.numpad .btn-secondary:hover {
+  background-color: #a2b2e1;
+}
+
+.numpad .btn-tertiary {
+  font-size: 2.8rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(6, 63%, 50%);
+  border-bottom: 0.4rem solid hsl(6, 70%, 34%);
+}
+
+.numpad .btn-tertiary:hover {
+  background-color: #f96b5b;
+}
+
+.btn-reset {
+  grid-column: 1 / 3;
+}
+
+.btn-equals {
+  grid-column: 3 / -1;
+}
+
+.btn-reset,
+.btn-equals {
+  width: auto !important;
+}
+
+/* DARK */
+
+/* LIGHT */
+
+/* NEON */
